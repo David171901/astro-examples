@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets'
+import eslandHero from '../../public/eslandHero.svg'
+---
+
+<div class="relative w-full">
+	<Image
+		src={eslandHero}
+		alt="Esland - Premios a la comunidad hispanohablante de Streaming"
+		class="absolute left-0 right-0 top-10 z-10 m-auto w-[1000px]"
+	/>
+	<video
+		class="animate-fade animate-duration-[4000ms] animate-ease-in-out h-screen w-full object-cover object-top"
+		muted
+		loop
+		autoplay
+		src="./video.mp4"
+		style="clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+  "></video>
+	<video class="absolute -bottom-48 -z-40 blur-3xl" muted autoplay loop src="./video.mp4"></video>
+</div>
