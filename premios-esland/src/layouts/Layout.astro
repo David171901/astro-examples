@@ -4,6 +4,7 @@ interface Props {
 	description: string
 }
 const { title, description } = Astro.props
+import '@fontsource-variable/onest';
 ---
 
 <!doctype html>
@@ -25,6 +26,15 @@ const { title, description } = Astro.props
 		color-scheme: dark;
 	}
 	html {
-		background: #111e31;
+		font-family: 'Onest Variable' ,system-ui, sans-serif;
+		background: #151a36;
+	}
+
+	.text-default {
+		@apply mb-4 font-thin leading-6 tracking-wide text-[#ffffe6];
+	}
+
+	.text-default strong {
+		@apply font-bold text-white;
 	}
 </style>
