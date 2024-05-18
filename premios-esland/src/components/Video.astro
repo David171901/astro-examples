@@ -3,6 +3,16 @@ import { Image } from 'astro:assets'
 import eslandHero from '../../public/eslandHero.svg'
 ---
 
+<style>
+	.video {
+		clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+	}
+	@media (min-width: 640px) {
+		.video {
+			clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+		}
+	}
+</style>
 <div class="relative w-full">
 	<Image
 		src={eslandHero}
@@ -10,12 +20,10 @@ import eslandHero from '../../public/eslandHero.svg'
 		class="absolute left-0 right-0 top-10 z-10 m-auto w-[1000px]"
 	/>
 	<video
-		class="h-screen w-full animate-fade object-cover object-top animate-duration-[4000ms] animate-ease-in-out"
+		class="video h-screen w-full animate-fade object-cover object-top animate-duration-[4000ms] animate-ease-in-out"
 		muted
 		loop
 		autoplay
-		src="./video.webm"
-		style="clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
-  "></video>
+		src="./video.webm"></video>
 	<video class="absolute -bottom-48 -z-40 blur-3xl" muted autoplay loop src="./video.webm"></video>
 </div>
