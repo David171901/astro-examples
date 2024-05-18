@@ -5,6 +5,7 @@ interface Props {
 }
 const { title, description } = Astro.props
 import '@fontsource-variable/onest'
+import Header from '../components/Header.astro'
 ---
 
 <!doctype html>
@@ -18,6 +19,7 @@ import '@fontsource-variable/onest'
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header />
 		<slot />
 	</body>
 </html>
