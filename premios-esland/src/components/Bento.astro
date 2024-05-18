@@ -1,45 +1,28 @@
 ---
 import BentoItem from './BentoItem.astro'
+
+import { getI18N } from '../i18n'
+const { currentLocale } = Astro
+const i18N = getI18N({ currentLocale })
 ---
 
 <section class="mx-auto grid w-full max-w-[1400px] auto-rows-[30rem] grid-cols-10 gap-4 p-20">
-	<BentoItem
-		className="col-span-10 md:col-span-4"
-		title="ANDORRA: EL CÉNIT DE LOS PREMIOS ESLAND"
-		subtitle=""
-	>
+	<BentoItem className="col-span-10 md:col-span-4" title={i18N.BENTO_TITLE_1}>
 		<div
 			slot="image"
 			class="absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-blue-950 bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
 			style="background-image: url('/andorraMountain.webp')"
 		>
 		</div>
-		<p slot="content" class="text-default max-w-xl">
-			Una nueva edición <strong> cargada de novedades </strong> y contenido, que empezará varias semanas
-			antes de la ansiada gala. <strong>
-				Directos especiales, colaboraciones, conciertos y mucho más
-			</strong> en lo que será una auténtica fiesta dedicada a la creación de contenido.
-		</p>
+		<p slot="content" class="text-default max-w-xl" set:html={i18N.BENTO_CONTENT_1} />
 	</BentoItem>
 	<BentoItem
 		className="col-span-10 md:col-span-6"
-		title="LA ALFOMBRA BLANCA Y LA GALA"
-		subtitle="16 de febrero de 2024"
+		title={i18N.BENTO_TITLE_2}
+		subtitle={i18N.BENTO_SUBTITLE_2}
 	>
 		<div slot="content">
-			<p class="text-default">
-				<strong>Uno de los días más esperados del año</strong> en la comunidad hispanohablante, <strong
-					>con dos grandes hitos concentrados en un mismo directo.</strong
-				> Una alfombra por la que pasarán <strong>los mejores streamers del año</strong>, luciendo
-				sus mejores galas, momentos antes de saber si son los premiados.
-			</p>
-			<p class="text-default">
-				Y una gala llena de emoción, <strong
-					>con la entrega de premios, conciertos de artistas internacionales, y una gran cantidad de
-					contenido</strong
-				> pensado exclusivamente para la comunidad de streaming hispanohablante.
-			</p>
-			<p class="text-default">No te lo pierdas.</p>
+			<p class="text-default" set:html={i18N.BENTO_CONTENT_2} />
 		</div>
 		<div
 			slot="image"
@@ -48,7 +31,12 @@ import BentoItem from './BentoItem.astro'
 		>
 		</div>
 	</BentoItem>
-	<BentoItem className="col-span-10 md:col-span-6" title="LA GALA" subtitle="17 de febrero de 2024">
+	<BentoItem
+		className="col-span-10 md:col-span-6"
+		title={i18N.BENTO_TITLE_3}
+		subtitle={i18N.BENTO_SUBTITLE_3}
+	>
+		<p slot="content" class="text-default" set:html={i18N.BENTO_CONTENT_3} />
 		<div
 			slot="image"
 			class="transition-scale absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-blue-950 bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
@@ -56,18 +44,8 @@ import BentoItem from './BentoItem.astro'
 		>
 		</div>
 	</BentoItem>
-	<BentoItem
-		className="col-span-10 md:col-span-4"
-		title="DISFRUTA DEL REDDIT DE LA COMUNIDAD"
-		subtitle=""
-	>
-		<p class="text-default" slot="content">
-			Este año, el reddit no formará parte de las votaciones de los premios, pero sí que <strong
-				>formará parte de la comunidad</strong
-			>. El subreddit oficial de los Premios ESLAND está abierto para ti, para que compartas tus
-			clips, tus opiniones y para que <strong>interactúes con toda la comunidad</strong> del streaming
-			hispanohablante.
-		</p>
+	<BentoItem className="col-span-10 md:col-span-4" title={i18N.BENTO_TITLE_4}>
+		<p class="text-default" slot="content" set:html={i18N.BENTO_CONTENT_4} />
 		<div
 			slot="image"
 			class="transition-scale absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-blue-950 bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
