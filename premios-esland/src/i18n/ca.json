@@ -22,5 +22,23 @@
   "HEADER_VOTE": "VOTA",
   "HEADER_INFO": "INFO",
   "HEADER_ARCHIVE": "ARXIU",
-  "HEADER_BUTTON": "CRITERIS DE NOMINACIÓ"
+  "HEADER_BUTTON": "CRITERIS DE NOMINACIÓ",
+  "FOOTER": {
+    "DISCLAIMER": "Todos los derechos reservados. - Esta no es la web oficial, desarrollada por @midudev para fines educativos",
+    "LEGAL": {
+      "TITLE": "Legal",
+      "NOTICE": "Aviso Legal",
+      "PRIVACY": "Privacidad",
+      "COOKIES": "Cookies",
+      "PRIVACY_POLICY": "Política de Privacidad",
+      "TOS": "Términos y Condiciones"
+    },
+    "WEB_MAP": {
+      "TITLE": "Mapa Web",
+      "HOME": "Inicio",
+      "INFO": "Info",
+      "ARCHIVE": "Archivo"
+    },
+    "PRODUCED_BY": "Producido por"
+  }
 }
