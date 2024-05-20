@@ -1,8 +1,3 @@
----
-import { Image } from 'astro:assets'
-import eslandHero from '../../public/eslandHero.svg'
----
-
 <style>
 	.video {
 		clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
@@ -14,10 +9,10 @@ import eslandHero from '../../public/eslandHero.svg'
 	}
 </style>
 <div class="relative w-full">
-	<Image
-		src={eslandHero}
+	<img
+		src='/eslandHero.svg'
 		alt="Esland - Premios a la comunidad hispanohablante de Streaming"
-		class="absolute left-0 right-0 top-10 z-10 m-auto w-[1000px]"
+		class="absolute left-0 right-0 top-20 md:top-10 z-10 m-auto w-[1000px]"
 	/>
 	<video
 		class="video h-screen w-full animate-fade object-cover object-top animate-duration-[4000ms] animate-ease-in-out"

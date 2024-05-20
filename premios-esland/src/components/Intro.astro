@@ -1,14 +1,11 @@
 ---
-import { Image } from 'astro:assets'
-import esland from '../../public/eslandLogo.svg'
-
 import { getI18N } from '../i18n'
 const { currentLocale } = Astro
 const i18N = getI18N({ currentLocale })
 ---
 
 <section class="mx-auto my-16 max-w-[70ch] text-pretty p-6 text-left text-xl md:px-20">
-	<Image src={esland} alt="Logo de los Esland" class="m-auto mb-10 w-16" />
+	<img src='/eslandLogo.svg' alt="Logo de los Esland" class="m-auto mb-10 w-16" />
 	<h1 class="mx-auto mb-10 text-wrap text-center text-4xl font-semibold tracking-wide">
 		{i18N.INTRO_TITLE}
 		<br />
