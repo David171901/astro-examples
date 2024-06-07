@@ -1,21 +1,11 @@
-<style>
-	.video {
-		clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
-	}
-	@media (min-width: 640px) {
-		.video {
-			clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
-		}
-	}
-</style>
-<div class="relative w-full">
+<div class="relative w-full h-[80vh] max-w-[100vw] aspect-video md:h-full">
 	<img
 		src='/eslandHero.svg'
 		alt="Esland - Premios a la comunidad hispanohablante de Streaming"
 		class="absolute left-0 right-0 top-20 md:top-10 z-10 m-auto w-[1000px]"
 	/>
 	<video
-		class="video h-screen w-full animate-fade object-cover object-top animate-duration-[4000ms] animate-ease-in-out"
+		class="clip-path h-screen w-full animate-fade object-cover object-top animate-duration-[4000ms] animate-ease-in-out"
 		muted
 		loop
 		autoplay
