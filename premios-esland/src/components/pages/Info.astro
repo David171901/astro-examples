@@ -6,6 +6,76 @@ const { currentLocale } = Astro
 const i18N = getI18N({ currentLocale })
 ---
 
-<Layout title='Archivo' description='Archivo'>
-  <HeroContainer img="/infoBackground.webp" />
+<Layout title="Premios Esland - Archivo" description="Archivo">
+	<HeroContainer img="/infoBackground.webp">
+		<h1 class="mb-10 text-center text-3xl font-medium md:text-5xl">LOS PREMIOS ESLAND</h1>
+	</HeroContainer>
+	<main>
+		<section
+			class="mx-auto my-24 flex w-full max-w-[1400px] flex-col items-center justify-between gap-10 text-pretty p-6 px-6 text-left text-xl sm:px-20 md:flex-row md:p-8"
+		>
+			<div class="space-y-4 md:w-1/2">
+				<p class="text-2xl font-semibold md:text-3xl">
+					Un reconocimiento único para creadores, creadoras y comunidades que buscan su lugar en el
+					mundo del entretenimiento en directo.
+				</p>
+				<p class="text-default">
+					Los Premios ESLAND son una iniciativa privada promovida por el célebre streamer TheGrefg y
+					buscan apoyar y reconocer la creación de contenido en el ámbito hispanohablante.
+				</p>
+				<p class="text-default">
+					ESLAND es el acrónimo de ESPAÑA, LATINOAMÉRICA Y ANDORRA, tres localizaciones geográficas
+					que comparten el idioma que las une más allá de cualquier frontera, ya sea física o
+					virtual.
+				</p>
+			</div>
+			<div class="mt-6 md:mt-0 md:w-1/2">
+				<img
+					class="h-full w-full rounded-md object-cover"
+					src="./eslandAuditorium.webp"
+					alt=""
+					width="500"
+					height="500"
+					style="aspect-ratio:812/556;object-fit:cover"
+				/>
+			</div>
+		</section>
+		<section
+			class="mx-auto flex w-full items-center justify-center text-pretty text-left text-xl"
+			style="
+      background: linear-gradient(70deg, #000527 47%, #1682c7 80%);
+      background-size: 120% 120%;
+      "
+		>
+			<div
+				class="flex max-w-[1400px] flex-col items-center justify-between gap-10 px-6 py-16 sm:px-20 md:flex-row md:px-8 md:py-20"
+			>
+				<div class="mt-6 md:mt-0 md:w-1/2">
+					<img
+						class="h-full w-full rounded-md object-cover"
+						src="./eslandAward.webp"
+						alt=""
+						width="500"
+						height="500"
+						style="aspect-ratio:812/556;object-fit:cover"
+					/>
+				</div>
+				<div class="space-y-4 md:w-1/2">
+					<p class="text-2xl font-semibold uppercase md:text-3xl">El premio a la creación</p>
+					<p class="text-default">
+						El trofeo que se entrega a los ganadores y ganadoras en la ceremonia es <span
+							class="strong">una representación de la letra “A” dividida en tres fragmentos</span
+						> y ensambladas a modo de artilugio futurista sobre el que se construye la narrativa del
+						evento.
+					</p>
+					<p class="text-default">
+						Un artefacto de origen desconocido que dota de <span class="strong"
+							>herramientas y habilidades para la creación.</span
+						> Una metáfora sobre la emancipación del talento gracias a la tecnología y la irrupción de
+						los creadores de contenido en el mundo del entretenimiento.
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>
 </Layout>
