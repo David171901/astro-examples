@@ -1,6 +1,7 @@
 ---
 import { getI18N } from '../../i18n'
 import Layout from '../../layouts/Layout.astro'
+import Counter from '../Counter.astro'
 import HeroContainer from '../HeroContainer.astro'
 const { currentLocale } = Astro
 const i18N = getI18N({ currentLocale })
@@ -8,7 +9,7 @@ const i18N = getI18N({ currentLocale })
 
 <Layout title="Archivo" description="Archivo">
 	<HeroContainer img="/archivoBackground.webp">
-		<h1 class="mb-10 text-5xl font-medium">EDICIONES ANTERIORES</h1>
+		<h1 class="mb-10 text-center text-5xl font-medium">EDICIONES ANTERIORES</h1>
 		<a
 			class="w-fit rounded-full border border-solid border-white px-3 py-3 text-xs font-medium uppercase no-underline md:px-5 md:py-2 md:text-xl"
 			href="https://www.youtube.com/watch?v=1YmpPrqKP-g"
@@ -17,5 +18,7 @@ const i18N = getI18N({ currentLocale })
 			REVIVE LA ÚLTIMA GALA
 		</a>
 	</HeroContainer>
-	<main></main>
+	<main>
+		<Counter />
+	</main>
 </Layout>
