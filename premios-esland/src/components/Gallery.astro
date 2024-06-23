@@ -1,0 +1,24 @@
+---
+import { GalleryResponsive } from './GalleryResponsive'
+---
+
+<section class="mx-auto my-16 max-w-[1400px] text-pretty text-xl md:px-20">
+	<section class="mx-auto w-full p-10 md:p-20">
+		<lite-youtube
+			class="shadow-2xl shadow-white/10"
+			videoid="aL8kcA3ZDOs"
+			videotitle="Anuncio Oficial Premios Esland"
+		>
+		</lite-youtube>
+	</section>
+	<h2 class="mx-auto text-wrap text-center text-4xl font-semibold uppercase tracking-wide">
+		Galería
+	</h2>
+	<p class="text-default text-center">
+		Algunos de los mejores momentos de la gala que pasarán a la historia.
+	</p>
+	<GalleryResponsive client:load />
+</section>
+<script>
+	import '@justinribeiro/lite-youtube'
+</script>

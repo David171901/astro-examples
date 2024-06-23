@@ -2,6 +2,7 @@
 import { getI18N } from '../../i18n'
 import Layout from '../../layouts/Layout.astro'
 import Counter from '../Counter.astro'
+import Gallery from '../Gallery.astro'
 import HeroContainer from '../HeroContainer.astro'
 const { currentLocale } = Astro
 const i18N = getI18N({ currentLocale })
@@ -19,6 +20,7 @@ const i18N = getI18N({ currentLocale })
 		</a>
 	</HeroContainer>
 	<main>
+		<Gallery />
 		<Counter />
 	</main>
 </Layout>
